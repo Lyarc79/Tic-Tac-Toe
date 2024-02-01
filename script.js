@@ -68,7 +68,6 @@ const GameBoard = (function () {
         placeToken,
         getRows,
         getColumns,
-        // checkWinner: () => checkWinner(rows, columns),
     }
 })()
 
@@ -277,18 +276,6 @@ const Game = (function () {
             Game.endGameActions();
         }
     };
-    /*
-    const gamePlay = () => {
-     initializeGame();
-     const numberOfRounds = 3;
-     for(let round = 1; round <= numberOfRounds; round++){
-         console.log(`Round ${round}`);
-         playRound();
-         console.log("Gameboard", GameBoard.getGameBoard());
-     }
-     console.log("Game finished.");
-    }
-    */
     return {
         playRound,
         switchTurns,
@@ -302,65 +289,4 @@ const Game = (function () {
     }
 })()
 
-// Game.initializeGame();
 Game.gamePlay();
-
-/*
-GameBoard.createGameBoard();
-
-console.log("Initial Game Board:", GameBoard.getGameBoard());
-GameBoard.placeToken(0, 0, "X");
-console.log("Update Game Board:", GameBoard.getGameBoard());
-GameBoard.resetGameBoard();
-console.log(GameBoard.getGameBoard());
-console.log("Current player:", Game.getCurrentPlayer());
-// Game.playRound();
-console.log(GameBoard.getGameBoard());
-GameBoard.placeToken(1, 1, "X");
-GameBoard.placeToken(1, 2, "X");
-GameBoard.placeToken(1, 0, "X");
-GameBoard.placeToken(0, 0, "X");
-GameBoard.placeToken(2, 0, "X");
-GameBoard.placeToken(2, 0, "O");
-
-GameBoard.resetGameBoard();
-console.log(GameBoard.getGameBoard());
-Game.playRound();
-console.log(GameBoard.getGameBoard());
-Game.playRound();
-console.log(GameBoard.getGameBoard());
-Game.playRound();
-console.log(GameBoard.getGameBoard());
-Game.playRound();
-console.log(GameBoard.getGameBoard());
-Game.playRound();
-console.log(GameBoard.getGameBoard());
-*/
-// READ THIS
-// Now its working more or less fine, problems are:
-// - Checkwinner is still being called 2 times per round (didnt find why). 
-// - There is a round winner anytime a row/column/diagonal is filled with tokens, the problem is that it accepts combined tokens. / SOLVED
-// - Would be awesome to create a new board each time getGameBoard is done or resetGameBoard (not really important now, just for logging purposes).
-
-/*
-Game.playRound();
-console.log(GameBoard.getGameBoard());
-Game.checkGameStatus();
-Game.playRound();
-console.log(GameBoard.getGameBoard());
-Game.checkGameStatus();
-Game.playRound();
-console.log(GameBoard.getGameBoard());
-Game.checkGameStatus();
-Game.playRound();
-console.log(GameBoard.getGameBoard());
-Game.checkGameStatus();
-*/
-
-/*
-const gameChecker = GameBoard.checkWinner();
-const isWinForX = gameChecker.checkForWin("X");
-const isWinForO = gameChecker.checkForWin("O");
-console.log("Is there a win for X?", isWinForX);
-console.log("Is there a win for O?", isWinForO);
-*/
