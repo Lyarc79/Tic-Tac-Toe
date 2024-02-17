@@ -1,13 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
-    <script src="script.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://kit.fontawesome.com/967516047d.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    
+    <header class="header" id="header">
+        <h1>Tic Tac Toe</h1>
+    </header>
+    <div class="winnerDisplay" id="winnerDisplay"></div>
+    <div class="main">
+        <div class="playerOne" id="playerOne">
+            <div>
+                <div class="playerContainer">
+                    <h3 class="player1Name" id="player1Name">Player 1</h3>
+                    <p class="player1Score" id="player1Score"></p>
+                </div>
+                <p class="tokenDisplay">Token:<span class="player1Token" id="player1Token"></span></p>
+            </div>
+            <div class="playerBox">
+                <label for="player-one">Name:</label>
+                <input type="text" id="player-one" name="player-one" placeholder="Vincenzo">
+                <button id="player1Btn">Set name</button>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="game-board" id="game-board"></div>
+        </div>
+        <div class="playerTwo" id="playerTwo">
+            <div>
+                <div class="playerContainer">
+                    <h3 class="player2Name" id="player2Name">Player 2</h3>
+                    <p class="player2Score" id="player2Score"></p>
+                </div>
+                <p class="tokenDisplay">Token:<span class="player2Token" id="player2Token"></span></p>
+            </div>
+            <div class="playerBox">
+                <label for="player-two">Name:</label>
+                <input type="text" id="player-two" name="player-two" placeholder="Chayoung">
+                <button id="player2Btn">Set name</button>
+            </div>
+        </div>
+    </div>
+    <div class="controlBtns" id="controlBtns">
+        <button class="playAgainBtn" id="playAgainBtn">Play again</button>
+        <button class="restartBtn" id="restartBtn">Restart</button>
+    </div>
+    <footer id="footer">
+        <p> Made by Lyarc79
+            <a href="https://github.com/Lyarc79" target="_blank">
+                <i id="github-logo" class="fa-brands fa-github"></i>
+            </a>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
