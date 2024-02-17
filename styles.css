@@ -137,6 +137,11 @@ body{
     color: var(--zinc100);
     font-size: 60px;
     background-color: var(--zinc600);
+    cursor: pointer;
+}
+
+.gameCell:hover{
+    background-color: var(--zinc700);
 }
 
 .controlBtns{
